@@ -14,9 +14,12 @@ const Home = () => {
   return (
     <div>
       <Hero />
-      <section className="py-16 bg-teal-400 rounded-xl mt-2">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-[30px] max-w-sm mx-auto md:max-w-none md:mx-0">
+      <section className="rounded-xl mt-2">
+        <h2 className="text-4xl text-center font-semibold my-4">
+          Our Products
+        </h2>
+        <div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mx-auto justify-items-center">
             {filteredProducts.map((product) => {
               return <Product product={product} key={product.id} />;
             })}
