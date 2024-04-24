@@ -5,8 +5,8 @@ import HeroImg2 from "../assets/hero1.png";
 
 const Hero = () => {
   return (
-    <section className=" mt-2">
-      <div className="bg-rose-200 rounded-xl text-black w-full h-[400px]  py-1 px-3 sm:flex items-center justify-center">
+    <section className=" mt-2 border-[2px] rounded-xl ">
+      <div className=" rounded-xl text-black w-full h-[400px]  py-1 px-3 sm:flex items-center justify-center">
         <div className="flex flex-col justify-between items-center w-full gap-5 ">
           <img src={HeroImg} className="w-[300px] sm:hidden" />
           <div className="flex flex-col justify-center items-center gap-2 md:gap-4 lg:gap-6">

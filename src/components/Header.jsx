@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <header className="">
-      <nav className="bg-teal-400 flex justify-between items-center px-3 py-2 rounded-xl ">
+    <header className="shadow-lg">
+      <nav className="flex justify-between items-center px-3 py-2 rounded-xl  ">
         <Link href="#">
           <img className="h-[50px]" src={Logo} />
         </Link>
