@@ -18,11 +18,11 @@ const Header = () => {
   return (
     <header
       className={`shadow-lg rounded-xl border-2 bg-white z-10 ${
-        isActive ? "fixed top-0 left-0 w-full" : ""
+        isActive ? "fixed top-0 left-0 w-full px-5" : ""
       }`}
     >
       <nav className="flex justify-between items-center px-3 py-2 rounded-xl  ">
-        <Link href="#">
+        <Link to="/">
           <img className="h-[50px]" src={Logo} />
         </Link>
         <div
