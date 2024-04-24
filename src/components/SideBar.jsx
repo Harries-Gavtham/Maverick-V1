@@ -1,33 +1,32 @@
 import React, { useContext } from "react";
 import { SidebarContext } from "../context/SidebarContext";
 import { IoMdArrowForward } from "react-icons/io";
-// import { IoMdArrowForward } from "react-icons/io";
-// import { CartContext } from "../context/CartContext";
-// import CartItem from "./CartItem";
-// import { FiTrash2 } from "react-icons/fi";
-// import { Link } from "react-router-dom";
+import { CartContext } from "../context/CartContext";
+import CartItem from "./CartItem";
+import { FiTrash2 } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const SideBar = () => {
   const { isOpen, handleClose } = useContext(SidebarContext);
-  // const { cart, clearCart, total, itemAmount } = useContext(CartContext);
+  const { cart, clearCart, total, itemAmount } = useContext(CartContext);
   return (
     <div
       className={`${
         isOpen ? "right-0" : "-right-full"
-      } w-full bg-white fixed top-0 h-full shadow-2xl md:w-[40vw] xl:max-w-[35vw] transition-all duration-300 z-20 px-5 lg:px-[10px]`}
+      } w-full bg-white fixed top-0 h-full shadow-2xl md:w-[45vw] xl:max-w-[35vw] transition-all duration-300 z-20 px-2 lg:px-[10px]`}
     >
-      <div className="flex items-center justify-between py-6 border-b">
-        {/* <div className="uppercase text-sm font-semibold">
+      <div className="flex items-center justify-between py-6 px-5 border-b">
+        <div className="uppercase text-[1rem] font-semibold">
           Shopping Bag ({itemAmount})
-        </div> */}
+        </div>
         <div
           onClick={handleClose}
-          className="cursor-pointer w-8 h-8 flex justify-center items-center"
+          className="cursor-pointer flex justify-center items-center"
         >
           <IoMdArrowForward size={40} />
         </div>
       </div>
-      {/* <div className="flex flex-col gap-y-2 h-[520px] lg:h-[640px] overflow-y-auto overflow-x-hidden border-b">
+      <div className="flex flex-col gap-y-2 h-[520px] lg:h-[640px] overflow-y-auto overflow-x-hidden border-b">
         {cart.map((item) => {
           return <CartItem item={item} key={item.id}></CartItem>;
         })}
@@ -57,7 +56,7 @@ const SideBar = () => {
         >
           Checkout
         </Link>
-      </div> */}
+      </div>
     </div>
   );
 };
