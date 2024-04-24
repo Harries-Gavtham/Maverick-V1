@@ -7,7 +7,7 @@ const Product = ({ product }) => {
 
   return (
     <div className="border-2 border-black rounded-xl">
-      <div className=" h-[400px] w-[280px] relative  group transition">
+      <div className=" h-[410px] w-[280px] relative  group transition">
         <div className="w-full h-full flex flex-col justify-center items-center">
           <div className="w-[200px] mx-auto flex justify-center items-center mb-10">
             <img
