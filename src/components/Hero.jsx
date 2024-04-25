@@ -5,7 +5,7 @@ import HeroImg2 from "../assets/hero1.png";
 
 const Hero = () => {
   return (
-    <section className=" mt-2 border-[2px] rounded-xl ">
+    <section className=" mt-2 border-[2px] border-black rounded-xl bg-zinc-300">
       <div className=" rounded-xl text-black w-full h-[400px]  py-1 px-3 sm:flex items-center justify-center">
         <div className="flex flex-col justify-between items-center w-full gap-5 ">
           <img src={HeroImg} className="w-[300px] sm:hidden" />
@@ -25,7 +25,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="hidden sm:block">
-          <img src={HeroImg2} className="w-[1000px]" />
+          <img src={HeroImg2} className="w-[900px]" />
         </div>
       </div>
     </section>

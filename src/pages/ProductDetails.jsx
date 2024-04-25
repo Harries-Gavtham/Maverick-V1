@@ -33,7 +33,7 @@ const ProductDetails = () => {
               {title}
             </h1>
             <div className="text-xl text-red-500 font-medium mb-2">
-              $ {price}
+              ₹ {price}
             </div>
             <p className="mb-2">{description}</p>
             <button

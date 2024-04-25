@@ -44,9 +44,9 @@ const CartItem = ({ item }) => {
               </div>
             </div>
             <div className="flex-1 flex items-center justify-around">
-              ${price}
+            ₹{price}
             </div>
-            <div className="flex-1 flex justify-end items-center text-primary font-medium">{`$ ${parseFloat(
+            <div className="flex-1 flex justify-end items-center text-primary font-medium">{`₹ ${parseFloat(
               price * amount
             ).toFixed(2)}`}</div>
           </div>
