@@ -5,7 +5,6 @@ import { CartContext } from "../context/CartContext";
 import CartItem from "./CartItem";
 import { FiTrash2 } from "react-icons/fi";
 import { Link } from "react-router-dom";
-
 const SideBar = () => {
   const { isOpen, handleClose } = useContext(SidebarContext);
   const { cart, clearCart, total, itemAmount } = useContext(CartContext);
@@ -13,43 +12,37 @@ const SideBar = () => {
     <div
       className={`${
         isOpen ? "right-0" : "-right-full"
-      } w-full bg-white fixed top-0 h-[vh] shadow-2xl md:w-[45vw] xl:max-w-[35vw] transition-all duration-300 z-20 px-2 lg:px-[10px]`}
+      } w-full bg-white fixed top-0 h-full shadow-2xl md:w-[45vw] xl:max-w-[30vw] transition-all duration-300 z-20 px-4 lg:px-[35px]`}
     >
-      <div className="flex items-center justify-between py-6 px-5 border-b">
-        <div className="uppercase text-[1rem] font-semibold">
+      <div className="flex items-center justify-between py-6 border-b">
+        <div className="uppercase text-sm font-semibold">
           Shopping Bag ({itemAmount})
         </div>
         <div
           onClick={handleClose}
-          className="cursor-pointer flex justify-center items-center"
+          className="cursor-pointer w-8 h-8 flex justify-center items-center"
         >
-          <IoMdArrowForward size={40} />
+          <IoMdArrowForward className="text-2xl" />
         </div>
       </div>
-      <div className="flex flex-col gap-y-2 h-[520px] lg:h-[640px] overflow-y-auto overflow-x-hidden border-b">
+      <div className="flex flex-col gap-y-2 h-[350px]  overflow-y-auto overflow-x-hidden border-b">
         {cart.map((item) => {
           return <CartItem item={item} key={item.id}></CartItem>;
         })}
       </div>
-      <div className="flex flex-col gap-y-0 ">
+      <div className="flex flex-col gap-y-3 py-4 mt-1">
         <div className=" flex w-full justify-between items-center">
           <div className="uppercase font-semibold">
-            <span className="mr-2">Total: </span> ₹
+            <span className="mr-2">Total: </span> $
             {parseFloat(total).toFixed(2)}
           </div>
           <div
             onClick={clearCart}
-            className="cursor-pointer py-3 bg-red-500 text-white w-12  flex justify-center items-center text-xl"
+            className="cursor-pointer py-4 bg-red-500 text-white w-12 h-1/2 flex justify-center items-center text-xl"
           >
             <FiTrash2 />
           </div>
         </div>
-        <Link
-          to="/"
-          className="bg-gray-200 flex p-4 justify-center items-center text-primary w-full font-medium"
-        >
-          View Cart
-        </Link>
         <Link
           to="/"
           className="bg-black flex p-4 justify-center items-center text-white w-full font-medium"
